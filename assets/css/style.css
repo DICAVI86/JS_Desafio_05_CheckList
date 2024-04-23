@@ -1,0 +1,33 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    border: 1px solid red;
+    display: grid;
+    width: 50%;
+    background-color: lightgray;
+    border-radius: 15px;
+}
+
+.input {
+    border: 1px solid red;
+}
+
+.lista {
+    border: 1px solid red;
+    display: flex;
+}
+
+.contadores {
+    border: 1px solid red;
+    width: 30%;
+}
+
+.listaId {
+    border: 1px solid red;
+    width: 70%;
+}
+

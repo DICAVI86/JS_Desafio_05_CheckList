@@ -5,29 +5,68 @@ body {
 }
 
 .card {
-    border: 1px solid red;
-    display: grid;
-    width: 50%;
+    /* border: 1px solid red; */
+    width: 40%;
     background-color: lightgray;
     border-radius: 15px;
+    box-shadow: 3px 3px lightskyblue;
+    margin: 40px;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
 }
 
 .input {
-    border: 1px solid red;
+    border-bottom: 2px solid lightslategray;
+    margin: 0px 15px;
+}
+
+#inputTarea {
+    margin: 15px 0px;
+    height: 24px;
+    width: 50%;
+}
+
+/* --------BOTON----------- */
+#agregarTarea {
+    height: 32px;
+    width: 20%;
+    background-color: lightseagreen;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+#agregarTarea:hover{
+    background-color: rgb(22, 123, 118);
+    color: aliceblue;
 }
 
 .lista {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
+    gap: 10px;
+    margin: 0px 15px;
 }
 
 .contadores {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    margin: 10px;
     width: 30%;
+    border-right: 1px solid lightslategray;
 }
 
 .listaId {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    display: flex;
     width: 70%;
+    gap: 10px;
 }
+
+#numId {
+    width: 30%;
+}
+
 

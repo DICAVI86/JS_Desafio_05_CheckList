@@ -11,33 +11,25 @@
     <div class="card">
         <h1>To Do List</h1>
 
-        <div class="input">
+        <form id="input">
             <p>Agregar nueva tarea</p>
-            <input type="text" id="inputTarea">
-            <button id="agregarTarea">Agregar</button>
-        </div>
+            <input type="text" id="nuevaTarea" placeholder="tarea" required>
+            <button type="submit">Agregar</button>
+        </form>
 
-        <div class="lista">
-            <div class="contadores">
-                <p id="totalTareas">Total: 0</p>
-                <p id="tareasRealizadas">Realizadas: 0</p>
+        <data class="info">
+            <div id="contadores">
+                <p>Total: <span id="totalTareas">0</span> </p>
+                <p>Realizadas: <span id="tareasRealizadas">0</span> </p>
             </div>
-            <div class="listaId">
-                
-                    <ul id="numId">ID
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
 
-                    <ul id="listTareas">Tarea
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                
+            <div class="lista">
+                <h3>Lista de Tarea</h3>
+                    <ul id="listaTareas">
+                        <!-- Aqui se agregan las Tareas-->
+                    </ul>   
             </div>
-        </div>
+        </data>
     </div>
 
     <script src="./assets/js/script.js"></script>

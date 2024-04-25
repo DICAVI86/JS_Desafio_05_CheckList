@@ -23,7 +23,7 @@ h1 {
     margin: 0px 15px;
 }
 
-#inputTarea {
+#nuevaTarea {
     margin: 15px 0px;
     height: 24px;
     width: 50%;
@@ -44,14 +44,14 @@ h1 {
     color: aliceblue;
 }
 
-.lista {
+.info {
     /* border: 1px solid red; */
     display: flex;
     gap: 10px;
     margin: 0px 15px;
 }
 
-.contadores {
+#contadores {
     /* border: 1px solid red; */
     margin: 10px;
     width: 30%;

@@ -5,13 +5,16 @@ document.getElementById('input').addEventListener('submit', function (e) {
     if (nuevaTarea === '') {
         alert('Por favor anota una tarea.');
         return;
-    }
+    } 
 
     const listaTareas = document.getElementById('listaTareas');
     const li = document.createElement('li');
-    li.textContent = `${nuevaTarea}`;
-    li.appendChild(createDeleteButton());
-    li.appendChild(createCheckbox());
+    li.innerHTML = `
+    <span>${nuevaTarea}</span>
+    <input type="checkbox">
+    <button class="delete">❌</button>
+    `;
+
     listaTareas.appendChild(li);
 
     updateStats();
@@ -19,35 +22,21 @@ document.getElementById('input').addEventListener('submit', function (e) {
     document.getElementById('nuevaTarea').value = '';
 });
 
-function createDeleteButton() {
-    const deleteButton = document.createElement('button');
-    deleteButton.classList.add('delete')
-    deleteButton.textContent = 'X';
-    deleteButton.onclick = function (e) {
+document.getElementById('listaTareas').addEventListener('click', function (e) {
+    if (e.target.classList.contains('delete')) {
         e.target.parentNode.remove();
         updateStats();
-    };
-    return deleteButton;
-}
-
-function createCheckbox() {
-    const checkbox = document.createElement('input');
-    checkbox.type= 'checkbox';
-    return checkbox;
-}
-
-document.getElementById('input').addEventListener('click', function (e) {
-    if (e.target.type === 'checkbox') {
-        e.target.parentNode.classList.toggle('completed');
+    } else if (e.target.type === 'checkbox') {
+        e.target.parentNode.classList.toggle('completada');
         updateStats();
     }
 });
 
 function updateStats() {
     const totalTareas = document.querySelectorAll('#listaTareas li').length;
-    //const tareasRealizadas = document.querySelectorAll('#tareasRealizadas').length;
+    const tareasRealizadas = document.querySelectorAll('#listaTareas input[type="checkbox"]:checked').length;
     document.getElementById('totalTareas').textContent = totalTareas;
-    //document.getElementById('tareasRealizadas').textContent = tareasRealizadas;
+    document.getElementById('tareasRealizadas').textContent = tareasRealizadas;
 }
 
 

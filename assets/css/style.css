@@ -69,4 +69,9 @@ h1 {
     width: 30%;
 }
 
+.completada {
+    font-weight: 600;
+    color: rgb(176, 176, 176);
+}
+
 

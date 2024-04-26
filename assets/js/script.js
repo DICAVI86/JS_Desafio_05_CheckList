@@ -10,8 +10,8 @@ document.getElementById('input').addEventListener('submit', function (e) {
     const listaTareas = document.getElementById('listaTareas');
     const li = document.createElement('li');
     li.innerHTML = `
-    <span>${nuevaTarea}</span>
     <input type="checkbox">
+    <span>${nuevaTarea}</span>
     <button class="delete">❌</button>
     `;
 

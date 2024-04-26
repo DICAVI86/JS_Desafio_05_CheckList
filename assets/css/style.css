@@ -8,6 +8,7 @@ body {
     /* border: 1px solid red; */
     width: 40%;
     background-color: lightgray;
+    border: 2px solid lightskyblue;
     border-radius: 15px;
     box-shadow: 3px 3px lightskyblue;
     margin: 40px;
@@ -58,20 +59,28 @@ h1 {
     border-right: 1px solid lightslategray;
 }
 
-.listaId {
-    /* border: 1px solid red; */
-    display: flex;
+.lista {
+    border: 1px solid red;
     width: 70%;
     gap: 10px;
+}
+
+#listaTareas li {
+    border: 20px;
+}
+
+#listaTareas li button {
+    border: none;
+    background-color: 0%;
+    align-items: end;
 }
 
 #numId {
     width: 30%;
 }
 
-.completada {
-    font-weight: 600;
-    color: rgb(176, 176, 176);
+#listaTareas li input[type="checkbox"]:checked ~ span {
+    color: grey; /* Cambia el color a gris */
+    text-decoration: line-through; /* Aplica una línea tachada */
 }
-
 

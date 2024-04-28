@@ -19,12 +19,13 @@ h1 {
     text-align: center;
 }
 
-.input {
+#input {
     border-bottom: 2px solid lightslategray;
     margin: 0px 15px;
 }
 
 #nuevaTarea {
+    border: 2px solid lightskyblue; 
     margin: 15px 0px;
     height: 24px;
     width: 50%;
@@ -57,16 +58,23 @@ h1 {
     margin: 10px;
     width: 30%;
     border-right: 1px solid lightslategray;
+    font-weight: 600;
+}
+
+#contadores p span{
+    justify-content: right;
 }
 
 .lista {
-    border: 1px solid red;
     width: 70%;
     gap: 10px;
 }
 
 #listaTareas li {
-    border: 20px;
+    display: flex;
+    justify-content:space-between;
+    padding: 10px 0px;
+    list-style-type: none;
 }
 
 #listaTareas li button {
@@ -82,5 +90,9 @@ h1 {
 #listaTareas li input[type="checkbox"]:checked ~ span {
     color: grey; /* Cambia el color a gris */
     text-decoration: line-through; /* Aplica una línea tachada */
+}
+
+#abc {
+    color: green;
 }
 
